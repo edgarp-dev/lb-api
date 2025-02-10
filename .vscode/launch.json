@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "api",
+      "program": "${workspaceFolder}/backend/api/src/app.ts",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--inspect-brk",
+        "--allow-net",
+        "--allow-env",
+        "--allow-read"
+      ],
+      "attachSimplePort": 9229,
+      "cwd": "${workspaceFolder}/backend/api",
+      "outputCapture": "std",
+      "problemMatcher": ["$deno"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
