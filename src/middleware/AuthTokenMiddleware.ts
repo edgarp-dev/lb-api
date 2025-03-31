@@ -1,4 +1,4 @@
-import { Context } from "https://deno.land/x/oak/mod.ts";
+import { Context } from "@oak/oak";
 import SupabaseClient from "../supabase/SupabaseClient.ts";
 
 const supabase = SupabaseClient.getClient();

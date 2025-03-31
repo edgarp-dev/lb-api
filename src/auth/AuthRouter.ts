@@ -1,4 +1,4 @@
-import { Router } from "https://deno.land/x/oak@v17.1.1/mod.ts";
+import { Router } from "@oak/oak";
 import { login, refreshToken, signup } from "./AuthController.ts";
 
 const router = new Router();

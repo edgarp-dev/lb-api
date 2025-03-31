@@ -1,0 +1,9 @@
+{
+	"tasks": {
+		"dev": "deno serve --allow-env --allow-net --watch -R ./src/app.ts"
+	},
+	"imports": {
+		"@oak/oak": "jsr:@oak/oak@^17.1.4",
+		"@std/dotenv": "jsr:@std/dotenv@^0.225.3"
+	}
+}

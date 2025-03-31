@@ -1,5 +1,5 @@
-import "jsr:@std/dotenv/load";
-import { Application, Router } from "https://deno.land/x/oak@v17.1.1/mod.ts";
+import "@std/dotenv/load";
+import { Application, Router } from "@oak/oak";
 import cors from "./middleware/CORSMiddleware.ts";
 import routinesController from "./routines/RoutinesRouter.ts";
 import authRouter from "./auth/AuthRouter.ts";
@@ -7,7 +7,7 @@ import authRouter from "./auth/AuthRouter.ts";
 const router = new Router();
 
 router.get("/hello", (context) => {
-  context.response.body = "Hello world!";
+	context.response.body = "Hello world!";
 });
 
 const app = new Application();
