@@ -1,5 +1,6 @@
 import "@std/dotenv/load";
-import { Application, Router } from "@oak/oak";
+import { Application } from "@oak/application";
+import { Router } from "@oak/router";
 import cors from "./middleware/CORSMiddleware.ts";
 import routinesController from "./routines/RoutinesRouter.ts";
 import authRouter from "./auth/AuthRouter.ts";

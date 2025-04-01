@@ -1,4 +1,4 @@
-import { Context } from "@oak/oak";
+import { Context } from "@oak/context";
 import SupabaseClient from "../supabase/SupabaseClient.ts";
 
 const supabase = SupabaseClient.getClient();

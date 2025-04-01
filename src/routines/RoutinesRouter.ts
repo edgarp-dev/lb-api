@@ -1,4 +1,4 @@
-import { Router } from "@oak/oak";
+import { Router } from "@oak/router";
 import {
     createExercise,
     createRoutine,

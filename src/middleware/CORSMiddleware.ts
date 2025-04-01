@@ -1,4 +1,4 @@
-import { Context } from "@oak/oak";
+import { Context } from "@oak/context";
 
 const cors = async (context: Context, next: () => Promise<unknown>) => {
   context.response.headers.set("Access-Control-Allow-Origin", "*");
