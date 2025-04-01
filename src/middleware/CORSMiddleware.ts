@@ -1,4 +1,4 @@
-import { Context } from "https://deno.land/x/oak@v17.1.1/context.ts";
+import { Context } from "@oak/context";
 
 const cors = async (context: Context, next: () => Promise<unknown>) => {
   context.response.headers.set("Access-Control-Allow-Origin", "*");

@@ -7,12 +7,17 @@ COPY --from=deno_bin /deno /usr/local/bin/deno
 
 ENV PORT=8000
 EXPOSE 8000
-RUN mkdir /var/deno_dir
 ENV DENO_DIR=/var/deno_dir
+RUN mkdir -p ${DENO_DIR}
 
 WORKDIR /var/task
-COPY ./src /var/task
+COPY . .
 
-RUN timeout 10s deno run -A app.ts || [ $? -eq 124 ] || exit 1
+RUN deno cache --config=deno.json ./src/app.ts
 
-CMD ["deno", "run", "-A", "app.ts"]
+CMD ["deno", "run", \
+    "--config=deno.json", \
+    "--allow-env", \
+    "--allow-net", \
+    "--allow-read", \
+    "./src/app.ts"]
